@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objects>
+	<object Name="Ava_GGMB_MopBot" Inherits="BaseRobot">
+		<part Name="Body" Anatomy="TreadedRobot" />
+		<part Name="Render" DisplayName="cleaner" RenderString="m" ColorString="&amp;c" Tile="Creatures/MopBot.png" DetailColor="Y" />
+		<part Name="Description" Short="A squat barrel of tarnished chrome hums ponderously across the ground, disturbing clouds of dust. Twin pylons terminate in gyroscope-spun whining bristles that draw in errant wet for disposal." />
+		<part Name="Brain" Calm="True" Factions="Barathrumites-100" Wanders="False" />
+		<part Name="Ava_GGMB_AICleanSpills" />
+		<stat Name="AV" Value="4" />
+		<stat Name="Level" Value="4" />
+		<stat Name="Hitpoints" Value="40" />
+		<stat Name="XPValue" Value="25" />
+		<inventoryobject Blueprint="Ava_CleanerBot_Brush" Number="2" />
+		<inventoryobject Blueprint="StorageTank" />
+		<tag Name="Species" Value="wheeled robot" />
+	</object>
+	<object Name="Ava_CleanerBot_Brush" Inherits="NaturalWeapon">
+		<part Name="MeleeWeapon" BaseDamage="1" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
+		<part Name="Render" DisplayName="{{Y|humming brush}}" />
+		<part Name="VibroWeapon" ChargeUse="0" />
+	</object>
+	<object Name="Ava_GGMB_MopBotGritGate" Inherits="Ava_GGMB_MopBot">
+		<part Name="Brain" Factions="Barathrumites-100" />
+		<part Name="Ava_GGMB_AICleanSpills" Configurable="True" />
+		<removepart Name="Combat" />
+	</object>
+</objects>
