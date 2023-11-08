@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
-	<object Name="Ava_GGMB_MopBot" Inherits="BaseRobot">
+	<object Name="Ava_CleanerBot_CleanerBot" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
 		<part Name="Render" DisplayName="cleaner" RenderString="m" ColorString="&amp;c" Tile="Creatures/MopBot.png" DetailColor="Y" />
 		<part Name="Description" Short="A squat barrel of tarnished chrome hums ponderously across the ground, disturbing clouds of dust. Twin pylons terminate in gyroscope-spun whining bristles that draw in errant wet for disposal." />
 		<part Name="Brain" Calm="True" Factions="Barathrumites-100" Wanders="False" />
-		<part Name="Ava_GGMB_AICleanSpills" />
+		<part Name="Ava_CleanerBot_AICleanSpills" />
 		<stat Name="AV" Value="4" />
 		<stat Name="Level" Value="4" />
 		<stat Name="Hitpoints" Value="40" />
@@ -19,9 +19,7 @@
 		<part Name="Render" DisplayName="{{Y|humming brush}}" />
 		<part Name="VibroWeapon" ChargeUse="0" />
 	</object>
-	<object Name="Ava_GGMB_MopBotGritGate" Inherits="Ava_GGMB_MopBot">
+	<object Name="Ava_CleanerBot_CleanerBotGritGate" Inherits="Ava_CleanerBot_CleanerBot">
 		<part Name="Brain" Factions="Barathrumites-100" />
-		<part Name="Ava_GGMB_AICleanSpills" Configurable="True" />
-		<removepart Name="Combat" />
 	</object>
 </objects>

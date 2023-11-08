@@ -23,7 +23,7 @@ namespace XRL.World.Parts
 
 		public override bool HandleEvent(GetInventoryActionsAlwaysEvent E)
 		{
-			if (Configurable && !ParentObject.IsPlayerControlled() && !ParentObject.pBrain.IsHostileTowards(E.Actor) && !ParentObject.HasPart<SocialRoles>())
+			if (!ParentObject.IsPlayerControlled() && !ParentObject.pBrain.IsHostileTowards(E.Actor) && !ParentObject.HasPart<SocialRoles>())
 				E.AddAction("Configure", "configure", "Configure", Key: 'c');
 			return base.HandleEvent(E);
 		}
@@ -71,6 +71,8 @@ namespace XRL.World.Parts
 
 		private bool CheckForSpills()
 		{
+			if (ParentObject.CurrentZone == null) // Fix errors on init
+				return false;
 			if (!ParentObject.FireEvent("CanAIDoIndependentBehavior") || ParentObject.IsPlayerControlled())
 				return false;
 			if (ParentObject.IsBusy())
@@ -113,8 +115,6 @@ namespace XRL.World.Parts
 		{
 			return lv.IsOpenVolume() && !lv.EffectivelySealed() && lv.Volume <= CleaningThreshold && (!ImpureOnly || !lv.IsPure());
 		}
-
-		public bool Configurable = true;
 
 		public int CleaningThreshold = 20;
 
