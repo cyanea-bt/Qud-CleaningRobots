@@ -1,6 +1,6 @@
 # Cleaning Robots
 
-This is a Caves of Qud mod that adds a `cleaner` creature to the robots faction that spends time mopping up spills. For the full description, see the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3077616001).
+This is a Caves of Qud mod that adds a cleaner creature to the robots faction that spends time mopping up spills. For the full description, see the [Steam Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=3077616001).
 
 Cleaning Robots is licensed under the [GNU General Public License v3](http://www.gnu.org/licenses/agpl.html), which can be found in full in [LICENSE.md](LICENSE.md).
 
