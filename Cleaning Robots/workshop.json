@@ -1,0 +1,8 @@
+{
+  "WorkshopId": 3077616001,
+  "Title": "Cleaning Robots",
+  "Description": "[b]This mod was developed for and tested on the Creatures of the 7th Plague beta. It has not been tested on the stable branch at the time of writing.[/b]\n\nThis is a little minimod that adds new low-level robots, called [b]cleaners[/b]. They automatically seek out messy liquids in their current zone, move to them, and clean them up with unerring precision, leaving the floor tidy and spotless. Every cleaner comes lacquered, so they won't track liquid anywhere themselves.\n\nOne reprogrammed cleaner always appears in Grit Gate, with their faction allegiance set to the Barathrumites. You might occasionally find cleaners in the wild as dynamic encounters, which will be part of the robots faction instead.\n\nYou can find this mod's source code on [GitHub](https://github.com/Ilysen/CleaningRobots), under the GPL v3 license.\n\nThis mod was almost entirely self-made, but A Blessed Feline from the Caves of Qud Discord server provided the sprite used for the cleaner. Thank you!\n\n[b]Notes:[/b]\n[list]\r\n[*]By default, cleaners will mop up any puddle of impure liquid that is at 20 drams or below. You can configure this with a context menu action, allowing them to target up to 64 drams of any liquid (not just impure) or anything in between.\n[*]At the moment, cleaned liquids are destroyed outright. In the future I'd like to make the cleaner physically collect the liquids into a tank and dump them into a grate, but this'll work for now.\n[/list]",
+  "Tags": "Beta,Creature",
+  "Visibility": "2",
+  "ImagePath": "preview.png"
+}
