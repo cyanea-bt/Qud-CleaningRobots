@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{B63FD48F-8993-4059-ABB8-F20999D7220A}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CleanerBot</RootNamespace>
-    <AssemblyName>CleanerBot</AssemblyName>
+    <RootNamespace>CleaningRobots</RootNamespace>
+    <AssemblyName>CleaningRobots</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -34,10 +34,11 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Cleaner Bot\GritGate.rpm" />
+    <None Include="Cleaning Robots\GritGate.rpm" />
+    <None Include="Cleaning Robots\manifest.json" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Cleaner Bot\XML\Creatures.xml" />
+    <Content Include="Cleaning Robots\XML\Creatures.xml" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Assembly-CSharp">
@@ -51,8 +52,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cleaner Bot\Scripts\AICleanSpills.cs" />
-    <Compile Include="Cleaner Bot\Scripts\CleanSpillGoal.cs" />
+    <Compile Include="Cleaning Robots\Scripts\AICleanSpills.cs" />
+    <Compile Include="Cleaning Robots\Scripts\CleanSpillGoal.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

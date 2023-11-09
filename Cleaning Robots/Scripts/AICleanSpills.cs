@@ -7,7 +7,7 @@ using XRL.World.AI.GoalHandlers;
 namespace XRL.World.Parts
 {
 	[Serializable]
-	public class Ava_CleanerBot_AICleanSpills : IPart
+	public class Ava_CleaningRobots_AICleanSpills : IPart
 	{
 		public override bool WantEvent(int ID, int cascade)
 		{
@@ -51,7 +51,7 @@ namespace XRL.World.Parts
 
 		public override bool HandleEvent(GetDebugInternalsEvent E)
 		{
-			if (ParentObject.HasGoal(nameof(Ava_CleanerBot_CleanSpillGoal)))
+			if (ParentObject.HasGoal(nameof(Ava_CleaningRobots_CleanSpillGoal)))
 				E.AddEntry(this, "Spill cleaning", "Cleaning a spill");
 			else
 				E.AddEntry(this, "Spill cleaning", "Idle");
@@ -106,7 +106,7 @@ namespace XRL.World.Parts
 			}
 			_lastSpill = _targetSpill;
 			ParentObject.pBrain.DidX("whirr", "studiously");
-			ParentObject.pBrain.PushGoal(new Ava_CleanerBot_CleanSpillGoal(_targetSpill));
+			ParentObject.pBrain.PushGoal(new Ava_CleaningRobots_CleanSpillGoal(_targetSpill));
 			ParentObject.pBrain.Think("I've acquired a spill to clean up.");
 			return true;
 		}

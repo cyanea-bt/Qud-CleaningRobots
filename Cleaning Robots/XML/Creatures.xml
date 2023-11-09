@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <objects>
-	<object Name="Ava_CleanerBot_CleanerBot" Inherits="BaseRobot">
+	<object Name="Ava_CleaningRobots_Cleaner" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
 		<part Name="Render" DisplayName="{{c|cleaner}}" RenderString="m" ColorString="&amp;c" Tile="Creatures/MopBot.png" DetailColor="Y" />
 		<part Name="Description" Short="A squat barrel of tarnished chrome hums ponderously across the ground, throwing floor-dust into clouds. Twin pylons terminate in whining bristles that draw in errant wet for disposal." />
 		<part Name="Brain" Calm="True" Factions="Robots-100" />
-		<part Name="Ava_CleanerBot_AICleanSpills" />
+		<part Name="Ava_CleaningRobots_AICleanSpills" />
 		<part Name="ModLacquered" />
 		<stat Name="AV" Value="4" />
 		<stat Name="Level" Value="4" />
 		<stat Name="Hitpoints" Value="40" />
 		<stat Name="Strength" Boost="-2" />
 		<stat Name="XPValue" Value="25" />
-		<inventoryobject Blueprint="Ava_CleanerBot_Brush" Number="2" />
+		<inventoryobject Blueprint="Ava_CleaningRobots_Brush" Number="2" />
 		<tag Name="Species" Value="wheeled robot" />
 	</object>
-	<object Name="Ava_CleanerBot_Brush" Inherits="NaturalWeapon">
+	<object Name="Ava_CleaningRobots_Brush" Inherits="NaturalWeapon">
 		<part Name="MeleeWeapon" BaseDamage="1" Skill="ShortBlades" Stat="Strength" Slot="Hand" />
 		<part Name="Render" DisplayName="{{Y|gyral brush}}" />
 		<part Name="VibroWeapon" ChargeUse="0" />
 	</object>
-	<object Name="Ava_CleanerBot_CleanerBotGritGate" Inherits="Ava_CleanerBot_CleanerBot">
+	<object Name="Ava_CleaningRobots_GritGateCleaner" Inherits="Ava_CleaningRobots_Cleaner">
 		<part Name="Render" DisplayName="reprogrammed {{c|cleaner}}" />
 		<part Name="Brain" Factions="Barathrumites-100" Wanders="False" />
 		<tag Name="ExcludeFromDynamicEncounters" />

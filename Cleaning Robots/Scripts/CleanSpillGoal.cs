@@ -4,9 +4,9 @@ using XRL.Rules;
 namespace XRL.World.AI.GoalHandlers
 {
 	[Serializable]
-	public class Ava_CleanerBot_CleanSpillGoal : GoalHandler
+	public class Ava_CleaningRobots_CleanSpillGoal : GoalHandler
 	{
-		public Ava_CleanerBot_CleanSpillGoal(GameObject Target)
+		public Ava_CleaningRobots_CleanSpillGoal(GameObject Target)
 		{
 			this.Target = Target;
 		}
