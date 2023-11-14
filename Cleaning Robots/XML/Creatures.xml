@@ -23,6 +23,7 @@
 	<object Name="Ava_CleaningRobots_GritGateCleaner" Inherits="Ava_CleaningRobots_Cleaner">
 		<part Name="Render" DisplayName="reprogrammed {{c|cleaner}}" />
 		<part Name="Brain" Factions="Barathrumites-100" Wanders="False" />
+		<tag Name="GritGateDefenseBehavior" Value="fearful" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 	</object>
 </objects>

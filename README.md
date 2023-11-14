@@ -10,5 +10,8 @@ This mod was almost entirely self-made, but **A Blessed Feline** from the Caves 
 
 ## Changelog
 
+### 14 November, 2023
+* The reprogrammed cleaner in Grit Gate will default to the "fearful" behavior during A Call to Arms.
+
 ### 9 November, 2023
 * Initial release.
