@@ -10,6 +10,9 @@ This mod was almost entirely self-made, but **A Blessed Feline** from the Caves 
 
 ## Changelog
 
+### 6 June, 2024
+* Updated to work with the Spring Molting patch (2.0.207.63).
+
 ### 14 November, 2023
 * The reprogrammed cleaner in Grit Gate will default to the "fearful" behavior during A Call to Arms.
 

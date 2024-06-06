@@ -18,10 +18,15 @@ namespace XRL.World.AI.GoalHandlers
 
 		public override void TakeAction()
 		{
-			if (Target != null && ParentObject.InZone(Target.CurrentZone.ZoneID))
+			if (Target != null)
 			{
-				CleanSpill();
-				return;
+				if (GameObject.Validate(Target) && ParentObject.InZone(Target.CurrentZone?.ZoneID))
+				{
+					CleanSpill();
+					return;
+				}
+				Think("I don't have a valid target anymore!");
+				Target = null;
 			}
 			FailToParent();
 		}
