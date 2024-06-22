@@ -13,7 +13,7 @@ namespace XRL.World.AI.GoalHandlers
 
 		public override bool Finished()
 		{
-			return Target.LiquidVolume == null || Target.LiquidVolume.Volume <= 0 || Target.LiquidVolume.IsPure();
+			return Target.LiquidVolume == null || Target.LiquidVolume.Volume <= 0;
 		}
 
 		public override void TakeAction()

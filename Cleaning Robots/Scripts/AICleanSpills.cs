@@ -23,7 +23,7 @@ namespace XRL.World.Parts
 
 		public override bool HandleEvent(GetInventoryActionsAlwaysEvent E)
 		{
-			if (!ParentObject.IsPlayerControlled() && !ParentObject.pBrain.IsHostileTowards(E.Actor) && !ParentObject.HasPart<SocialRoles>())
+			if (!ParentObject.IsPlayerControlled() && !ParentObject.Brain.IsHostileTowards(E.Actor) && !ParentObject.HasPart<SocialRoles>())
 				E.AddAction("Configure", "configure", "Configure", Key: 'c');
 			return base.HandleEvent(E);
 		}
@@ -33,11 +33,11 @@ namespace XRL.World.Parts
 			if (E.Command == "Configure")
 			{
 			Configure:
-				int choice = Popup.ShowOptionList($"{ParentObject.The} {ParentObject.DisplayName} hums.", new List<string>() { $"Configure cleaning threshold (currently {CleaningThreshold.Things("dram")} or lower)", $"Set to clean {(ImpureOnly ? "all liquids (currently impure only)" : "impure liquids only (currently all liquids)")}" }, AllowEscape: true);
+				int choice = Popup.PickOption($"{ParentObject.The} {ParentObject.DisplayName} hums.", Options: new List<string>() { $"Configure cleaning threshold (currently {CleaningThreshold.Things("dram")} or lower)", $"Set to clean {(ImpureOnly ? "all liquids (currently impure only)" : "impure liquids only (currently all liquids)")}" }, AllowEscape: true);
 				switch (choice)
 				{
 					case 0:
-						int? newThreshold = Popup.AskNumber("Enter a new threshold.", CleaningThreshold, Max: 64);
+						int? newThreshold = Popup.AskNumber("Enter a new threshold.", Start: CleaningThreshold, Max: 64);
 						if (newThreshold != null)
 							CleaningThreshold = (int)newThreshold;
 						goto Configure;
@@ -77,13 +77,13 @@ namespace XRL.World.Parts
 				return false;
 			if (ParentObject.IsBusy())
 			{
-				ParentObject.pBrain.Think("I'm too busy to be cleaning.");
+				ParentObject.Brain.Think("I'm too busy to be cleaning.");
 				return false;
 			}
 			var spills = ParentObject.CurrentZone.GetObjectsWithPart(nameof(LiquidVolume)).Where(x => ShouldClean(x.LiquidVolume));
 			if (spills.IsNullOrEmpty())
 			{
-				ParentObject.pBrain.Think("There's no spills to clean in this zone.");
+				ParentObject.Brain.Think("There's no spills to clean in this zone.");
 				return false;
 			}
 			GameObject _targetSpill = null;
@@ -101,13 +101,13 @@ namespace XRL.World.Parts
 			}
 			if (_targetSpill == null)
 			{
-				ParentObject.pBrain.Think("I couldn't find a spill to clean in this zone.");
+				ParentObject.Brain.Think("I couldn't find a spill to clean in this zone.");
 				return false;
 			}
 			_lastSpill = _targetSpill;
-			ParentObject.pBrain.DidX("whirr", "studiously");
-			ParentObject.pBrain.PushGoal(new Ava_CleaningRobots_CleanSpillGoal(_targetSpill));
-			ParentObject.pBrain.Think("I've acquired a spill to clean up.");
+			ParentObject.Brain.DidX("whirr", "studiously");
+			ParentObject.Brain.PushGoal(new Ava_CleaningRobots_CleanSpillGoal(_targetSpill));
+			ParentObject.Brain.Think("I've acquired a spill to clean up.");
 			return true;
 		}
 
