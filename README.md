@@ -10,6 +10,15 @@ This mod was almost entirely self-made, but **A Blessed Feline** from the Caves 
 
 ## Changelog
 
+### TBD, next major update
+#### Version 1.1
+* Re-pathed all instances of `Ava` to `Ceres`.
+* Added scrapped cleaners. 3 of them are guaranteed to appear in Golgotha, and they can be repaired into dormant cleaners. They're also guaranteed to be dropped on death by cleaners themselves.
+* Added dormant cleaners. You can get them through tinkering (use Psychometry or find a data disk) or by repairing a scrapped cleaner. Dormant cleaners can be deployed to create a neutral cleaner anywhere you want! It won't have any special allegiance to you, though.
+* Non-hostile cleaners can now be deactivated from their context menu to turn them into dormant cleaners. The reprogrammed cleaner in Grit Gate is an exception, for obvious reasons.
+* Cleaners no longer spawn lacquered.
+* Cleaners are now always neutral, regardless of your robot reputation. They'll still fight back if you attack them, or attack another robot near them.
+
 ### 22 June, 2024
 #### Version 1.0.3
 * Updated to work with game version 2.0.207.72, which featured breaking API changes.

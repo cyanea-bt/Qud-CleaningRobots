@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+	<population Name="GolgothaCloacaZoneGlobals" Load="Merge">
+		<object Number="3" Blueprint="Ceres_CleaningRobots_ScrappedCleaner" />
+	</population>
+</populations>
