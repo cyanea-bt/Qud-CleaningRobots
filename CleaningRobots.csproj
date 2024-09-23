@@ -37,10 +37,12 @@
     <None Include="Cleaning Robots\GritGate.rpm" />
     <None Include="Cleaning Robots\manifest.json" />
     <None Include="Cleaning Robots\workshop.json" />
+    <None Include="LICENSE.md" />
+    <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cleaning Robots\preview.png" />
-    <Content Include="Cleaning Robots\Textures\Creatures\MopBot.png" />
+    <Content Include="Cleaning Robots\Textures\Creatures\Cleaner.png" />
     <Content Include="Cleaning Robots\XML\Creatures.xml" />
     <Content Include="Cleaning Robots\XML\Objects.xml" />
     <Content Include="Cleaning Robots\XML\Populations.xml" />
