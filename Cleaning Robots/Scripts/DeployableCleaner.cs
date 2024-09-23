@@ -12,13 +12,13 @@ namespace XRL.World.Parts
 
 		public override bool HandleEvent(GetInventoryActionsAlwaysEvent E)
 		{
-			E.AddAction("Deploy", "deploy", "Deploy", Key: 'e');
+			E.AddAction("Activate", "activate", "Activate", Key: 'a');
 			return base.HandleEvent(E);
 		}
 
 		public override bool HandleEvent(InventoryActionEvent E)
 		{
-			if (E.Command == "Deploy" && AttemptDeploy(E.Actor))
+			if (E.Command == "Activate" && AttemptDeploy(E.Actor))
 			{
 				E.RequestInterfaceExit();
 			}
@@ -40,6 +40,8 @@ namespace XRL.World.Parts
 				return Actor.Fail("You can't deploy cleaners into a wall! That would make no sense. How is it going to fit?");
 			ParentObject.SystemMoveTo(toDeploy, forced: true);
 			GameObject newCleaner = ParentObject.ReplaceWith(GameObject.CreateUnmodified("Ceres_CleaningRobots_Cleaner"));
+			newCleaner.Brain.Wanders = false;
+			newCleaner.Brain.StartingCell = newCleaner.CurrentCell.GetGlobalLocation();
 			newCleaner.PlayWorldSound("Sounds/Robot/sfx_turret_deploy");
 			XDidYToZ(Actor, "deploy", newCleaner, EndMark: "! Beep boop.");
 			Actor.UseEnergy(2000);

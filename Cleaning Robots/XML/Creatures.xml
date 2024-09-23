@@ -3,8 +3,8 @@
 	<object Name="Ceres_CleaningRobots_Cleaner" Inherits="BaseRobot">
 		<part Name="Body" Anatomy="TreadedRobot" />
 		<part Name="Corpse" CorpseChance="100" CorpseBlueprint="Ceres_CleaningRobots_ScrappedCleaner" />
-		<part Name="Render" DisplayName="{{c|cleaner}}" RenderString="m" ColorString="&amp;c" Tile="Creatures/MopBot.png" DetailColor="Y" />
-		<part Name="Description" Short="A squat barrel of tarnished chrome hums ponderously across the ground, throwing floor-dust into clouds. Twin pylons terminate in whining bristles that draw in errant wet for disposal." />
+		<part Name="Render" DisplayName="{{c|cleaner}}" RenderString="m" ColorString="&amp;c" Tile="Creatures/Cleaner.png" DetailColor="Y" />
+		<part Name="Description" Short="A squat barrel of tarnished chrome hums ponderously across the ground, precipitating puffs of floor-dust. Twin pylons terminate in whining bristles to expel errant wet." />
 		<part Name="Brain" Calm="True" Factions="Robots-100" />
 		<part Name="Ceres_CleaningRobots_AICleanSpills" />
 		<stat Name="AV" Value="4" />

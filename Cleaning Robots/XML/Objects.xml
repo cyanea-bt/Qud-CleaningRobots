@@ -2,21 +2,21 @@
 <objects>
 	<object Name="Ceres_CleaningRobots_ScrappedCleaner" Inherits="Item">
 		<part Name="Physics" Weight="20" />
-		<part Name="Render" DisplayName="scrapped cleaner" RenderString="m" ColorString="&amp;y" Tile="Creatures/MopBot.png" DetailColor="Y" />
+		<part Name="Render" DisplayName="scrapped cleaner" RenderString="m" ColorString="&amp;y" Tile="Creatures/Cleaner.png" DetailColor="Y" />
 		<part Name="Repair" FixedBlueprint="Ceres_CleaningRobots_DormantCleaner" Difficulty="1" />
 		<part Name="Commerce" Value="5" />
-		<part Name="Description" Short="TODO" />
+		<part Name="Description" Short="Pocks blemish the wrapped chrome in shotshell scatter, and its jointed arms press limp against the earth. Here the cleanser has become the mess. " />
 		<tag Name="EquipSound" Value="sfx_equip_material_generic_metal" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 		<tag Name="NoSparkingQuest" />
 		<stag Name="Scrap" />
 	</object>
 	<object Name="Ceres_CleaningRobots_DormantCleaner" Inherits="Item">
-		<part Name="Render" DisplayName="{{c|dormant cleaner}}" RenderString="m" ColorString="&amp;c" Tile="Creatures/MopBot.png" DetailColor="Y" />
+		<part Name="Render" DisplayName="{{c|dormant cleaner}}" RenderString="m" ColorString="&amp;c" Tile="Creatures/Cleaner.png" DetailColor="Y" />
 		<part Name="Commerce" Value="30" />
-		<part Name="Description" Short="TODO" />
+		<part Name="Description" Short="A little metal cylinder patiently awaits becoming. Wiry arms were hooked to brackets and folded across the curving plane." />
 		<part Name="Physics" Weight="20" />
-		<part Name="TinkerItem" Bits="ACCD12" CanBuild="True" />
+		<part Name="TinkerItem" Bits="000012" CanBuild="True" />
 		<part Name="Ceres_CleaningRobots_DeployableCleaner" />
 		<tag Name="ExcludeFromDynamicEncounters" />
 		<tag Name="NoSparkingQuest" />
